@@ -1,0 +1,47 @@
+<div class="docs-section" id="forms">
+  <h6 class="docs-header">Forms</h6>
+  <p>Forms are a huge pain, but hopefully these styles make it a bit easier. All inputs, select, and buttons are
+    normalized
+    for a common height cross-browser so inputs can be stacked or placed alongside each other.</p>
+  <div class="docs-example docs-example-forms">
+    <form [formGroup]="enquiryForm" (ngSubmit)="sendForm($event)">
+      <div class="row">
+        <div class="six columns">
+          <div [ngClass]="{'has-error':!enquiryForm.controls['name'].valid && enquiryForm.controls['name'].touched}">
+            <label>Name *</label>
+            <input class="u-full-width" type="text" placeholder="" formControlName="name">
+            <div *ngIf="enquiryForm.controls['name'].hasError('required') && enquiryForm.controls['name'].touched" class="alert alert-danger">You must include a name.</div>
+          </div>
+          <div [ngClass]="{'has-error':!enquiryForm.controls['number'].valid && enquiryForm.controls['number'].touched}">
+            <label>Phone Number *</label>
+            <input class="u-full-width" type="tel" placeholder="" formControlName="number" required>
+            <div *ngIf="enquiryForm.controls['number'].hasError('required') && enquiryForm.controls['number'].touched" class="alert alert-danger">You must include a number for callback.</div>
+          </div>
+        </div>
+        <div class="six columns">
+          <div [ngClass]="{'has-error':!enquiryForm.controls['email'].valid && enquiryForm.controls['email'].touched}">
+            <label>Email </label>
+            <input class="u-full-width" type="email" placeholder="" formControlName="email">
+          </div>
+          <div [ngClass]="{'has-error':!enquiryForm.controls['subject'].valid && enquiryForm.controls['subject'].touched}">
+            <label>Subject *</label>
+            <select class="u-full-width" formControlName="subject" required>
+              <option *ngFor="let subject of subjects" value="{{subject}}">{{subject}}</option>
+            </select>
+            <div *ngIf="enquiryForm.controls['subject'].hasError('required') && enquiryForm.controls['subject'].touched" class="alert alert-danger">Please select an option.</div>
+          </div>
+        </div>
+      </div>
+      <div [ngClass]="{'has-error':!enquiryForm.controls['message'].valid && enquiryForm.controls['message'].touched}">
+        <label>Message *</label>
+        <textarea class="u-full-width" placeholder="Hi Brian &hellip;" formControlName="message" required></textarea>
+        <div *ngIf="enquiryForm.controls['message'].hasError('required') && enquiryForm.controls['message'].touched" class="alert alert-danger">Please type a message.</div>
+      </div>
+
+      <span class="label-body" style="float: right;">* required</span>
+      <input class="button-primary" type="submit" [disabled]="!enquiryForm.valid" value="Submit">
+    </form>
+    <h2>Or Call Us...</h2>
+    <p>Or if you would prefer to ring us on: 0862531010</p>
+  </div>
+</div>
