@@ -1,27 +1,16 @@
 <div class="docs-section">
-  <h3>EDT Lessons</h3>
-  <h4>Essential Driver Training</h4>
+  <h4 class="docs-header">EDT Lessons</h4>
+  <h5>Essential Driver Training</h5>
   <p>If you are not required to complete EDT, you may still choose to take an EDT course, as it can help increase
     your chances of passing the driving test and will help make you a better safer driver.</p>
   <p>We provide EDT lessons to students at all stages of their EDT training.</p>
   <p>If the issue date of your first B category (Car) learner permit is on or after 4 April 2011, in order to be
     able to sit your full driving test, you must first complete all EDT lessons.</p>
-  <h4>What is Essential Driver Training?</h4>
+  <h5>What is Essential Driver Training?</h5>
   <p>There are 12 lessons in total which cover many aspects of driving that you will need to complete successfully
     in order to prepare for your driving test which include:</p>
 
   <ul>
-    <li>LESSON 1: CAR CONTROLS AND SAFETY CHECKS</li>
-    <li>LESSON 2: CORRECT POSITIONING</li>
-    <li>LESSON 3: CHANGING DIRECTION</li>
-    <li>LESSON 4: PROGRESSION MANAGEMENT</li>
-    <li>LESSON 5: CORRECT POSITIONING</li>
-    <li>LESSON 6: ANTICIPATION AND REACTION</li>
-    <li>LESSON 7: SHARING THE ROAD</li>
-    <li>LESSON 8: DRIVING SAFELY THROUGH TRAFFIC</li>
-    <li>LESSON 9: CHANGING DIRECTION (MORE COMPLEX SITUATIONS)</li>
-    <li>LESSON 10: SPEED MANAGEMENT</li>
-    <li>LESSON 11: DRIVING CALMLY</li>
-    <li>LESSON 12: NIGHT DRIVING</li>
+    <li *ngFor="let lesson of lessons; let i = index;">LESSON {{i+1}}: {{lesson}}</li>
   </ul>
 </div>

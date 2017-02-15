@@ -84,6 +84,12 @@
   left: 5px; }
 .navbar {
   display: none; }
+.logo img {
+  display: none;
+}
+.logo span {
+  display: none;
+}
 
 /* Larger than phone */
 @media (min-width: 550px) {
@@ -113,6 +119,49 @@
   #burger {
     display: none;
   }
+
+
+  .home-img {
+    background: url('./images/hands.jpg') no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 35%;
+  }
+
+  .logo {
+    top: 0;
+    left: 0;
+    margin-left: 10%;
+    width: 20%;
+    height: 30%;
+    /*background-color: #fff;*/
+    z-index: 1000;
+  }
+
+  .logo img {
+    /*background: url("http://i.stack.imgur.com/xkF9Q.jpg") no-repeat;*/
+    max-width:100%;
+    max-height:100%;
+    z-index: 2000;
+    display: block;
+  }
+
+  .logo span {
+    color: white;
+    font-size: xx-large;
+    font-weight: 500;
+    display: block;
+  }
+
+  .logo-container {
+    display: none;
+  }
+
 }
 
 /* Larger than tablet */
@@ -278,7 +327,7 @@
   clear: both;
   height: auto;
   min-height: 4em;
-  margin-top: -4em;
+  margin-top: -1em;
 }
 
 .top-items {
@@ -304,3 +353,5 @@
   background-color: #f2dede;
   border-color: #ebccd1;
 }
+
+.sa-confirm-button-container button.confirm { padding: 0 2rem !important; }

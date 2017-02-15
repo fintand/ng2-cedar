@@ -1,8 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Http, URLSearchParams } from "@angular/http";
-import {log} from "util";
-
+import * as swal from "sweetalert";
 
 @Component({
   selector: 'contact',
@@ -12,7 +11,7 @@ import {log} from "util";
     '.has-error input, .has-error textarea, .has-error select{ border-color: #a94442; }'
   ]
 })
-export class ContactComponent {
+export class ContactComponent  implements AfterViewInit {
 
   // private url = 'http://localhost:3000/api/contact';
   // private url = 'https://jsonplaceholder.typicode.com';
@@ -45,10 +44,22 @@ export class ContactComponent {
   }
 
   postForm(obj) {
-    console.log(obj.toString())
     this.http.post(this.url + '?' + obj.toString(), {}).subscribe(
-      (data) => console.log(data)
+      (data) =>  {
+        this.enquiryForm.reset();
+        swal({
+          title: "Sent!",
+          text: "Thanks for your message, a member of our team will be with you shortly.",
+          allowOutsideClick: true,
+          type: "success",
+          confirmButtonColor: ''
+        })
+      }
     );
+  }
+
+  ngAfterViewInit() {
+
   }
 
 }
