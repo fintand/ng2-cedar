@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'sidenav',
@@ -7,7 +7,7 @@ import { Component, AfterViewInit } from '@angular/core';
 })
 export class SidenavComponent {
 
-  router: HTMLElement;
+  private router: HTMLElement;
 
   openNav() {
     if(document.getElementById("mySidenav").style.width === "250px") {
@@ -26,7 +26,7 @@ export class SidenavComponent {
   closeSidenav(e) {
     if(e.target !== document.querySelector("div#mySidenav.sidenav") && e.target !== document.querySelector("i.ion-navicon-round")) {
       document.getElementById("mySidenav").style.width = "0";
-      if(e.target.nodeName === "A") {
+      if(e.target.nodeName === "A" && document.body.clientWidth < 550) {
         this.router = <HTMLScriptElement> document.querySelector('router-outlet');
         window.scrollTo(0, this.router.offsetTop);
       }
