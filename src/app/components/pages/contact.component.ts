@@ -20,7 +20,7 @@ export class ContactComponent  implements AfterViewInit {
   public enquiryForm = this.fb.group({
     name: [null, Validators.required],
     number: ["", Validators.required],
-    email: [null],
+    email: [""],
     subject: ["", Validators.required],
     message: ["", Validators.maxLength(250)]
   });
@@ -34,11 +34,12 @@ export class ContactComponent  implements AfterViewInit {
   sendForm(event) {
     console.log(event);
     console.log(this.enquiryForm.value);
-    let {name, number, message, subject} = this.enquiryForm.value;
+    let {name, number, message, subject, email} = this.enquiryForm.value;
     this.params.set('name', name);
     this.params.set('number', number);
     this.params.set('message', message);
     this.params.set('subject', subject);
+    this.params.set('email', email);
 
     this.postForm(this.params);
   }
