@@ -131,6 +131,7 @@
     bottom: 0;
     left: 0;
     height: 35%;
+    box-shadow: 0 9px 5px -3px grey;
   }
 
   .logo {
@@ -293,8 +294,8 @@
   height: 100px;
   top: 10px;
   /*left: -200px;*/
-  background: url('images/cedar_logo.jpg');
-  background-size: 100px 50px;
+  background: url('assets/logo_two.png');
+  background-size: 100px 40px;
   background-repeat: no-repeat;
   animation: slideIn 0.8s;
   animation-fill-mode: forwards;
@@ -355,3 +356,13 @@
 }
 
 .sa-confirm-button-container button.confirm { padding: 0 2rem !important; }
+
+.hiddenClass {
+  transition: opacity 0.5s ease;
+  opacity: 0.0;
+}
+
+.visibleClass {
+  transition: opacity 0.5s ease;
+  opacity: 1.0;
+}

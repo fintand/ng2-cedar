@@ -9,8 +9,8 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--<link rel="icon" type="image/x-icon" href="favicon.ico">-->
-  <meta name="theme-color" content="#ffffff">
-  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#1d375a">
+  <meta name="msapplication-TileColor" content="#1d375a">
   <meta name="msapplication-TileImage" content="images/icons/ms-icon-144x144.png">
 
   <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
@@ -37,5 +37,22 @@
 </head>
 <body>
   <app-root></app-root>
+  <script src="assets/js/ScrollTrigger.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      var trigger = new ScrollTrigger({
+        toggle: {
+          visible: 'visibleClass',
+          hidden: 'hiddenClass'
+        },
+        offset: {
+          x: 0,
+          y: 20
+        },
+        addHeight: true,
+        once: false
+      }, document.body, window);
+    });
+  </script>
 </body>
 </html>
