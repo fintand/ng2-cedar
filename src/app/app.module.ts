@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { ReCaptchaModule } from 'angular2-recaptcha';
 
 import { AppComponent } from './app.component';
 
@@ -28,6 +29,7 @@ import { routing } from './app.routing';
   ],
   imports: [
     BrowserModule,
+    ReCaptchaModule,
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
