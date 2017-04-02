@@ -13,6 +13,7 @@
       ],
       "index": "index.html",
       "main": "main.ts",
+      "polyfills": "polyfills.ts",
       "test": "test.ts",
       "tsconfig": "tsconfig.json",
       "prefix": "app",
@@ -22,8 +23,8 @@
         "../node_modules/sweetalert/dist/sweetalert.css"
       ],
       "scripts": ["../node_modules/sweetalert/dist/sweetalert.min.js"],
+      "environmentSource": "environments/environment.ts",
       "environments": {
-        "source": "environments/environment.ts",
         "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"
       }
@@ -39,6 +40,7 @@
       "config": "./karma.conf.js"
     }
   },
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "defaults": {
     "styleExt": "css",
     "prefixInterfaces": false,
