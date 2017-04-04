@@ -31,8 +31,7 @@ export class ContactComponent  implements AfterViewInit {
 
   params: URLSearchParams = new URLSearchParams();
 
-  sendForm(event) {
-    console.log(event);
+  sendForm(event, captchaResponse) {
     console.log(this.enquiryForm.value);
     let {name, number, message, subject, email} = this.enquiryForm.value;
     this.params.set('name', name);
@@ -40,7 +39,7 @@ export class ContactComponent  implements AfterViewInit {
     this.params.set('message', message);
     this.params.set('subject', subject);
     this.params.set('email', email);
-
+    this.params.set('captchaResponse', captchaResponse);
     this.postForm(this.params);
   }
 
@@ -59,8 +58,8 @@ export class ContactComponent  implements AfterViewInit {
     );
   }
 
-  handleCorrectCaptcha(event) {
-    console.log('event', event)
+  resolved(captchaResponse: string, e) {
+    this.sendForm(e, captchaResponse);
   }
 
   ngAfterViewInit() {

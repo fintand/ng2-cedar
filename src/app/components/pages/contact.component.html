@@ -1,7 +1,7 @@
 <div class="docs-section" id="forms">
   <h4 class="docs-header">Contact Us</h4>
   <div class="docs-example docs-example-forms">
-    <form [formGroup]="enquiryForm" (ngSubmit)="sendForm($event)">
+    <form [formGroup]="enquiryForm" (ngSubmit)="captchaRef.execute()">
       <div class="row">
         <div class="six columns">
           <div [ngClass]="{'has-error':!enquiryForm.controls['name'].valid && enquiryForm.controls['name'].touched}">
@@ -36,7 +36,7 @@
       </div>
 
       <span class="label-body" style="float: right;">* required</span>
-      <re-captcha site_key="6LeVGxkUAAAAAGYgKolnj1W_OowBzrExvJUW00QQ" size="invisible" (captchaResponse)="handleCorrectCaptcha($event)"></re-captcha>
+      <re-captcha #captchaRef="reCaptcha" (resolved)="$event && resolved($event)" siteKey="6LeVGxkUAAAAAGYgKolnj1W_OowBzrExvJUW00QQ" size="invisible"></re-captcha>
       <input class="button-primary" type="submit" [disabled]="!enquiryForm.valid" value="Submit">
     </form>
     <h2>Or Call Us...</h2>
