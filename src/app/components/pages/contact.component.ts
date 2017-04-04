@@ -59,6 +59,10 @@ export class ContactComponent  implements AfterViewInit {
     );
   }
 
+  handleCorrectCaptcha(event) {
+    console.log('event', event)
+  }
+
   ngAfterViewInit() {
 
   }
