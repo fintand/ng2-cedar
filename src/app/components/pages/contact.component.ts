@@ -58,7 +58,7 @@ export class ContactComponent  implements AfterViewInit {
     );
   }
 
-  resolved(captchaResponse: string, e) {
+  resolved(captchaResponse: string, e: any) {
     this.sendForm(e, captchaResponse);
   }
 

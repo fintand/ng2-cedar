@@ -37,9 +37,9 @@
 
       <span class="label-body" style="float: right;">* required</span>
       <re-captcha #captchaRef="reCaptcha" (resolved)="$event && resolved($event)" siteKey="6LeVGxkUAAAAAGYgKolnj1W_OowBzrExvJUW00QQ" size="invisible"></re-captcha>
-      <input class="button-primary" type="submit" [disabled]="!enquiryForm.valid" value="Submit">
+      <input class="button-primary" [disabled]="!enquiryForm.valid" type="submit" value="Submit">
     </form>
     <h2>Or Call Us...</h2>
-    <p>Or if you would prefer to ring us on: 0862531010</p>
+    <p>Or if you would prefer to ring us on: <a href="tel:+353862531010">0862531010</a></p>
   </div>
 </div>
