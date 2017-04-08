@@ -13,8 +13,6 @@ import * as swal from "sweetalert";
 })
 export class ContactComponent  implements AfterViewInit {
 
-  // private url = 'http://localhost:3000/api/contact';
-  // private url = 'https://jsonplaceholder.typicode.com';
   private url = 'https://e8vp7z2t90.execute-api.eu-west-1.amazonaws.com/dev/contact';
 
   public enquiryForm = this.fb.group({
