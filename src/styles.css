@@ -128,9 +128,10 @@
 
   .home-img {
     /*background: url('./images/hands.jpg') no-repeat;*/
-    background: url('./images/dublin_city.png') no-repeat;
+    /*background: url('./images/dublin_city.png') no-repeat;*/
+    background: url('./images/dublin_city.svg') no-repeat;
     background-size: cover;
-    background-position: 10% 100%;
+    background-position: 10% 70%;
     position: absolute;
     top: 0;
     right: 0;
