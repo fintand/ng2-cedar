@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RecaptchaModule } from 'ng-recaptcha';
+import { Angulartics2Module, Angulartics2GoogleAnalytics } from 'angulartics2';
 
 import { AppComponent } from './app.component';
 
@@ -33,7 +34,8 @@ import { routing } from './app.routing';
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    routing
+    routing,
+    Angulartics2Module.forRoot([ Angulartics2GoogleAnalytics ])
   ],
   providers: [],
   bootstrap: [AppComponent]
