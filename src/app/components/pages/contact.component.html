@@ -36,7 +36,7 @@
       </div>
 
       <span class="label-body" style="float: right;">* required</span>
-      <re-captcha #captchaRef="reCaptcha" (resolved)="$event && resolved($event)" siteKey="6LeVGxkUAAAAAGYgKolnj1W_OowBzrExvJUW00QQ" size="invisible"></re-captcha>
+      <re-captcha #captchaRef="reCaptcha" (resolved)="resolved($event)" siteKey="6LeVGxkUAAAAAGYgKolnj1W_OowBzrExvJUW00QQ" size="invisible"></re-captcha>
       <input class="button-primary" [disabled]="!enquiryForm.valid" type="submit" value="Submit">
     </form>
     <h2>Or Call Us...</h2>

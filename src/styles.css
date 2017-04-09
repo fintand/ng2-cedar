@@ -2,7 +2,8 @@
 .container {
   max-width: 800px; }
 .header {
-  padding-top: 150px;
+  /*padding-top: 150px;*/
+  padding-top: 0;
   text-align: center; }
 .value-prop {
   margin-top: 1rem; }
@@ -91,6 +92,10 @@
   display: none;
 }
 
+.grecaptcha-badge {
+  display: none;
+}
+
 /* Larger than phone */
 @media (min-width: 550px) {
   .header {
@@ -122,16 +127,16 @@
 
 
   .home-img {
-    background: url('./images/hands.jpg') no-repeat;
+    /*background: url('./images/hands.jpg') no-repeat;*/
+    background: url('./images/dublin_city.png') no-repeat;
     background-size: cover;
-    background-position: 50% 50%;
+    background-position: 10% 100%;
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    height: 35%;
-    box-shadow: 0 9px 5px -3px grey;
+    height: 39%;
   }
 
   .logo {
@@ -294,7 +299,7 @@
   height: 100px;
   top: 10px;
   /*left: -200px;*/
-  background: url('assets/logo_two.png');
+  background: url('assets/logo_sm.png');
   background-size: 100px 40px;
   background-repeat: no-repeat;
   animation: slideIn 0.8s;
@@ -307,14 +312,17 @@
 }
 
 .logo-container {
-  top: 0;
-  left: 0;
-  position: absolute;
-  width: inherit;
-  min-height: 220px;
-  background: url('images/cedar_logo.jpg') no-repeat;
-  background-size: 500px auto;
+  padding: 0 10px;
 }
+
+.logo-container img{
+  max-height: 100%;
+  max-width: 100%
+}
+
+/*.header {*/
+  /*padding: 0;*/
+/*}*/
 
 /*body {*/
 /*height: 2000px;*/
@@ -323,7 +331,7 @@
 .footer {
   position: relative;
   padding: 2em 0;
-  background: #222;
+  background: #2e3347;
   color: #fff;
   clear: both;
   height: auto;

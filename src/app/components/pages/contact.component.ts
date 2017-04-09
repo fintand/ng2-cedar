@@ -11,7 +11,7 @@ import * as swal from "sweetalert";
     '.has-error input, .has-error textarea, .has-error select{ border-color: #a94442; }'
   ]
 })
-export class ContactComponent  implements AfterViewInit {
+export class ContactComponent implements AfterViewInit {
 
   private url = 'https://e8vp7z2t90.execute-api.eu-west-1.amazonaws.com/dev/contact';
 
@@ -29,7 +29,7 @@ export class ContactComponent  implements AfterViewInit {
 
   params: URLSearchParams = new URLSearchParams();
 
-  sendForm(event, captchaResponse) {
+  sendForm(captchaResponse) {
     console.log(this.enquiryForm.value);
     let {name, number, message, subject, email} = this.enquiryForm.value;
     this.params.set('name', name);
@@ -38,6 +38,7 @@ export class ContactComponent  implements AfterViewInit {
     this.params.set('subject', subject);
     this.params.set('email', email);
     this.params.set('captchaResponse', captchaResponse);
+    console.log(this.params);
     this.postForm(this.params);
   }
 
@@ -56,8 +57,8 @@ export class ContactComponent  implements AfterViewInit {
     );
   }
 
-  resolved(captchaResponse: string, e: any) {
-    this.sendForm(e, captchaResponse);
+  resolved(captchaResponse: string) {
+    this.sendForm(captchaResponse);
   }
 
   ngAfterViewInit() {
