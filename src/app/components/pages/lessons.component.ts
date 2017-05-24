@@ -12,7 +12,7 @@ export class LessonsComponent {
     this.meta.updateTag({name: 'description', content: this.lessons.map(elem => elem.toLowerCase()).map(elem => elem.charAt(0).toUpperCase() + elem.slice(1)).join('. ')}, 'name=description');
   }
 
-  private lessons = [
+  lessons = [
     "CAR CONTROLS AND SAFETY CHECKS",
     "CORRECT POSITIONING",
     "CHANGING DIRECTION",
