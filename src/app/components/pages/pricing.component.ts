@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Title, Meta} from "@angular/platform-browser";
 
 @Component({
   selector: 'pricing',
@@ -6,7 +7,11 @@ import { Component } from '@angular/core';
 })
 export class PricingComponent {
 
-  constructor() {}
+  constructor(private meta: Meta, private titleService: Title) {
+    this.titleService.setTitle('Pricing - Cedar Driving School');
+    this.meta.updateTag({name: 'description', content: 'Lessons, Pre-Test, EDT per hour. 6 Lessons. 12' +
+    ' EDT Lessons'}, 'name=description');
+  }
 
   prices = [
     {

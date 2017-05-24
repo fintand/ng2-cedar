@@ -2,6 +2,7 @@ import { Component, AfterViewInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Http, URLSearchParams } from "@angular/http";
 import * as swal from "sweetalert";
+import {Meta, Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'contact',
@@ -23,7 +24,10 @@ export class ContactComponent implements AfterViewInit {
     message: ["", Validators.maxLength(250)]
   });
 
-  constructor(public fb: FormBuilder, private http: Http) {}
+  constructor(public fb: FormBuilder, private http: Http, private meta: Meta, private titleService: Title) {
+    this.titleService.setTitle('Contact - Cedar Driving School');
+    this.meta.updateTag({name: 'description', content: 'Contact Us or Call Us.'}, 'name=description');
+  }
 
   subjects = ["General Enquiry", "Driving Lessons", "EDT Lessons", "Pre-Test", "Motorway Lessons", "Parking Lessons", "Theory Test Course", "Submit Feedback"];
 

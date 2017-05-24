@@ -1,10 +1,17 @@
 import { Component } from '@angular/core';
+import {Title, Meta} from "@angular/platform-browser";
 
 @Component({
   selector: 'services',
   templateUrl: './services.component.html'
 })
 export class ServicesComponent {
+
+  constructor(private meta: Meta, private titleService: Title) {
+    this.titleService.setTitle('Services - Cedar Driving School');
+    this.meta.updateTag({name: 'description', content: 'RSA and ADI approved instructors. ' +
+    'Pre-test, EDT and motorway driving courses. Lessons available 7 days a week'}, 'name=description');
+  }
 
   services = [
     "RSA and ADI approved instructors",
