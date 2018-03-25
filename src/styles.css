@@ -375,3 +375,21 @@
   transition: opacity 0.5s ease;
   opacity: 1.0;
 }
+
+.payment-cards {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.payment-cards > img {
+  height: 3em;
+  padding: 0 20px;
+}
+
+.visa-card {
+  fill: #94d31b;
+}
+
+.mastercard-card {
+  fill: #94d31b;
+}
