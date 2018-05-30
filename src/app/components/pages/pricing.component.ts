@@ -24,7 +24,7 @@ export class PricingComponent {
     },
     {
       lesson_type: "12 EDT Lessons",
-      price: "350"
+      price: "370"
     }
   ]
 
