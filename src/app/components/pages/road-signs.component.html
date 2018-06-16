@@ -1,0 +1,16 @@
+<div class="docs-section">
+  <input class="u-full-width" type="text" placeholder="Search {{roadSigns.length}} road signs for ..." [(ngModel)]="filterString" (ngModelChange)="doFilterCount(filterString)">
+  <span *ngIf="countFilter !== roadSigns.length">{{countFilter}} matching results</span>
+  <span *ngIf="countFilter === roadSigns.length">All {{roadSigns.length}} Road Signs</span>
+  <br>
+  <span>*Disclaimer: This is not an exhaustive list of National Road Signs in Ireland</span>
+  <br>
+  <div class="road-signs" lazy-load-images>
+    <div *ngFor="let svg of roadSigns | roadSignFilter: filterString">
+      <!--<img class="sign" [src]="'../assets/road_signs_png/' + svg + '.png'" >-->
+      <img class="sign" [attr.data-src]="'../assets/road_signs_png/' + svg + '.png'">
+      <span>{{svg}}</span>
+    </div>
+  </div>
+
+</div>

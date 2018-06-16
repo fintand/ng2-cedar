@@ -15,8 +15,13 @@ import { LessonsComponent } from './components/pages/lessons.component';
 import { ServicesComponent } from './components/pages/services.component';
 import { PricingComponent } from './components/pages/pricing.component';
 import { ContactComponent } from './components/pages/contact.component';
+import { RoadSignsComponent } from './components/pages/road-signs.component';
 
 import { routing } from './app.routing';
+import {RoadSignPipe} from "./components/util/roadSign.pipe";
+import {LazyLoadImagesModule} from "ngx-lazy-load-images";
+import {SidebarModule} from "ng-sidebar";
+import {LinksComponent} from "./components/pages/links.component";
 
 @NgModule({
   declarations: [
@@ -27,7 +32,10 @@ import { routing } from './app.routing';
     LessonsComponent,
     ServicesComponent,
     PricingComponent,
-    ContactComponent
+    ContactComponent,
+    LinksComponent,
+    RoadSignsComponent,
+    RoadSignPipe
   ],
   imports: [
     BrowserModule,
@@ -36,7 +44,9 @@ import { routing } from './app.routing';
     ReactiveFormsModule,
     HttpModule,
     routing,
-    Angulartics2Module.forRoot([ Angulartics2GoogleAnalytics ])
+    Angulartics2Module.forRoot([ Angulartics2GoogleAnalytics ]),
+    SidebarModule.forRoot(),
+    LazyLoadImagesModule
   ],
   providers: [Meta],
   bootstrap: [AppComponent]

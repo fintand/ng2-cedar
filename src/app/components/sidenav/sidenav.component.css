@@ -15,7 +15,7 @@
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: #dddddd;
   display: block;
   transition: 0.3s
 }
@@ -24,12 +24,17 @@
   color: #f1f1f1;
 }
 
+.sidenav .closebtn-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 14px 14px 0 0;
+}
+
 .sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
   font-size: 36px;
-  margin-left: 50px;
+  padding: 0 20px;
+  border: 1px solid;
+  border-radius: 13px;
 }
 
 @media screen and (max-height: 450px) {
@@ -43,4 +48,9 @@
   right: 0;
   margin-right: 2rem;
   margin-top: 1rem;
+}
+
+:host /deep/ .ng-sidebar {
+  background: #102744;
+  min-width: 250px;
 }

@@ -1,11 +1,20 @@
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
-  <a routerLink="/">Home</a>
-  <a routerLink="/lessons">EDT Lessons</a>
-  <a routerLink="/services">Our Services</a>
-  <a routerLink="/pricing">Pricing</a>
-  <a routerLink="/contact">Contact Us</a>
-  <a target="_blank" href="https://ccwdriver.rsa.ie/driver/driverlogin.aspx">My EDT</a>
-</div>
+<ng-sidebar-container>
 
-<span id="burger" style="font-size:30px;cursor:pointer" (click)="openNav()"><i class="ion-navicon-round"></i></span>
+  <ng-sidebar [(opened)]="_opened" class="sidenav" closeOnClickOutside="true">
+    <div class="closebtn-container">
+      <a href="javascript:void(0)" class="closebtn" (click)="_toggleSidebar()">&times;</a>
+    </div>
+    <a closeSidebar routerLink="/" (click)="clickLink()">Home</a>
+    <a closeSidebar routerLink="/lessons" (click)="clickLink()">EDT Lessons</a>
+    <a closeSidebar routerLink="/services" (click)="clickLink()">Our Services</a>
+    <a closeSidebar routerLink="/pricing" (click)="clickLink()">Pricing</a>
+    <a closeSidebar routerLink="/links" (click)="clickLink()">Links</a>
+    <a closeSidebar routerLink="/contact" (click)="clickLink()">Contact Us</a>
+    <a closeSidebar target="_blank" href="https://ccwdriver.rsa.ie/driver/driverlogin.aspx">My EDT</a>
+  </ng-sidebar>
+
+  <div ng-sidebar-content>
+    <span id="burger" style="font-size:30px;cursor:pointer" (click)="_toggleSidebar()"><i class="ion-navicon-round"></i></span>
+  </div>
+
+</ng-sidebar-container>

@@ -6,6 +6,8 @@ import { LessonsComponent } from './components/pages/lessons.component';
 import { ServicesComponent } from './components/pages/services.component';
 import { PricingComponent } from './components/pages/pricing.component';
 import { ContactComponent } from './components/pages/contact.component';
+import { RoadSignsComponent } from './components/pages/road-signs.component';
+import {LinksComponent} from "./components/pages/links.component";
 
 const appRoutes: Routes = [
   {
@@ -27,6 +29,14 @@ const appRoutes: Routes = [
   {
     path: 'contact',
     component: ContactComponent
+  },
+  {
+    path: 'links',
+    component: LinksComponent
+  },
+  {
+    path: 'road-signs',
+    component: RoadSignsComponent
   }
 ];
 
