@@ -22,6 +22,10 @@ import {RoadSignPipe} from "./components/util/roadSign.pipe";
 import {LazyLoadImagesModule} from "ngx-lazy-load-images";
 import {SidebarModule} from "ng-sidebar";
 import {LinksComponent} from "./components/pages/links.component";
+import {AngularFireModule} from "angularfire2";
+import {environment} from "../environments/environment";
+import {CoreModule} from "./core/core.module";
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +39,8 @@ import {LinksComponent} from "./components/pages/links.component";
     ContactComponent,
     LinksComponent,
     RoadSignsComponent,
-    RoadSignPipe
+    RoadSignPipe,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +51,9 @@ import {LinksComponent} from "./components/pages/links.component";
     routing,
     Angulartics2Module.forRoot([ Angulartics2GoogleAnalytics ]),
     SidebarModule.forRoot(),
-    LazyLoadImagesModule
+    LazyLoadImagesModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    CoreModule
   ],
   providers: [Meta],
   bootstrap: [AppComponent]
