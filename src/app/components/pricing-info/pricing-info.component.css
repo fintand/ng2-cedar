@@ -1,0 +1,70 @@
+:root {
+  --main-color: #102744;
+}
+
+body {
+  background: #eee;
+  color: #fff;
+}
+
+.main {
+  font-family: "Raleway", sans-serif;
+}
+
+.main .four {
+  /*   background: #fff; */
+  background: linear-gradient(135deg, #355faf, #1d375a) !important;
+  border-radius: 10px;
+  margin: 0 10px;
+  transition: box-shadow 0.3s;
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+  width: 100% !important;
+}
+
+.main .four:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.6);
+}
+
+.main .four .heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /*   background: var(--main-color); */
+  color: white;
+  border-radius: 10px 10px 0 0;
+}
+
+.main .four .heading .title {
+  padding: 10px 0;
+  font-size: 2em;
+}
+
+.main .four .heading .subtitle {
+  padding: 10px 0;
+  font-size: 1.5em;
+}
+
+.main .four .heading .price {
+  padding: 5px 0;
+  font-size: 4em;
+}
+
+.main .four .content {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #eee;
+}
+
+.main .four .content p {
+  /*border-bottom: 1px black solid;*/
+  font-size: 20px;
+}
+
+.main .four .content button {
+  color: #fff;
+  width: 200px;
+}

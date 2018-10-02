@@ -22,6 +22,7 @@ import {RoadSignPipe} from "./components/util/roadSign.pipe";
 import {LazyLoadImagesModule} from "ngx-lazy-load-images";
 import {SidebarModule} from "ng-sidebar";
 import {LinksComponent} from "./components/pages/links.component";
+import { PricingInfoComponent } from './components/pricing-info/pricing-info.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import {LinksComponent} from "./components/pages/links.component";
     ContactComponent,
     LinksComponent,
     RoadSignsComponent,
-    RoadSignPipe
+    RoadSignPipe,
+    PricingInfoComponent
   ],
   imports: [
     BrowserModule,

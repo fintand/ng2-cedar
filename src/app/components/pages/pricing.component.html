@@ -6,19 +6,10 @@
     <img src="../../../assets/cc-visa.svg" alt="visa logo">
     <img src="../../../assets/cc-mastercard.svg" alt="master card logo">
   </div>
+  <div style="display: flex; justify-content: space-between; padding: 50px 0;">
+    <pricing-info title="Lesson" subtitle="1 hour" price="35" content="['test', 'test']"></pricing-info>
+    <pricing-info title="Lesson" subtitle="1.5 hours" price="45" content="['test', 'test']"></pricing-info>
+    <pricing-info title="Lesson" subtitle="6 hours" price="190" content="['test', 'test']"></pricing-info>
+  </div>
 
-  <table class="u-full-width">
-    <thead>
-    <tr>
-      <th>Lesson Type</th>
-      <th>Price (Euro)</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let price of prices" data-scroll>
-      <td>{{price.lesson_type}}</td>
-      <td>&euro;{{price.price}}</td>
-    </tr>
-    </tbody>
-  </table>
 </div>
