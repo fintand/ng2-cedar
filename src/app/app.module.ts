@@ -22,6 +22,12 @@ import {RoadSignPipe} from "./components/util/roadSign.pipe";
 import {LazyLoadImagesModule} from "ngx-lazy-load-images";
 import {SidebarModule} from "ng-sidebar";
 import {LinksComponent} from "./components/pages/links.component";
+import { GiftVoucherComponent } from './components/pages/gift-voucher/gift-voucher.component';
+import { PaymentRequestComponent } from './components/util/payment-request/payment-request.component';
+import {AngularFireModule} from "angularfire2";
+import {environment} from "../environments/environment";
+import {AngularFirestoreModule} from "angularfire2/firestore";
+import {AngularFireAuthModule} from "angularfire2/auth";
 
 @NgModule({
   declarations: [
@@ -35,7 +41,9 @@ import {LinksComponent} from "./components/pages/links.component";
     ContactComponent,
     LinksComponent,
     RoadSignsComponent,
-    RoadSignPipe
+    RoadSignPipe,
+    GiftVoucherComponent,
+    PaymentRequestComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +54,10 @@ import {LinksComponent} from "./components/pages/links.component";
     routing,
     Angulartics2Module.forRoot([ Angulartics2GoogleAnalytics ]),
     SidebarModule.forRoot(),
-    LazyLoadImagesModule
+    LazyLoadImagesModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireAuthModule
   ],
   providers: [Meta],
   bootstrap: [AppComponent]

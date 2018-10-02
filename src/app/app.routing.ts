@@ -8,6 +8,7 @@ import { PricingComponent } from './components/pages/pricing.component';
 import { ContactComponent } from './components/pages/contact.component';
 import { RoadSignsComponent } from './components/pages/road-signs.component';
 import {LinksComponent} from "./components/pages/links.component";
+import {GiftVoucherComponent} from "./components/pages/gift-voucher/gift-voucher.component";
 
 const appRoutes: Routes = [
   {
@@ -37,6 +38,10 @@ const appRoutes: Routes = [
   {
     path: 'road-signs',
     component: RoadSignsComponent
+  },
+  {
+    path: 'gift-voucher',
+    component: GiftVoucherComponent
   }
 ];
 
