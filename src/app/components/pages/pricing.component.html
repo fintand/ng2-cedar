@@ -6,10 +6,11 @@
     <img src="../../../assets/cc-visa.svg" alt="visa logo">
     <img src="../../../assets/cc-mastercard.svg" alt="master card logo">
   </div>
-  <div style="display: flex; justify-content: space-between; padding: 50px 0;">
-    <pricing-info title="Lesson" subtitle="1 hour" price="35" content="['test', 'test']"></pricing-info>
-    <pricing-info title="Lesson" subtitle="1.5 hours" price="50" content="['test', 'test']"></pricing-info>
-    <pricing-info title="Lesson" subtitle="6 hours" price="190" content="['test', 'test']"></pricing-info>
+  <div style="display: flex; justify-content: space-around; padding: 50px 0;">
+    <pricing-info *ngFor="let price of prices1" [title]="price.title" [subtitle]="price.subtitle" [price]="price.price" [content]="price.content"></pricing-info>
+  </div>
+  <div style="display: flex; justify-content: space-around; padding: 50px 0;">
+    <pricing-info *ngFor="let price of prices2" [title]="price.title" [subtitle]="price.subtitle" [price]="price.price" [content]="price.content"></pricing-info>
   </div>
 
 </div>

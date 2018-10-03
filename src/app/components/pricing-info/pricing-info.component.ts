@@ -15,7 +15,7 @@ export class PricingInfoComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(typeof this.content);
+
   }
 
 }
