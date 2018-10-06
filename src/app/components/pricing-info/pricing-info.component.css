@@ -18,6 +18,7 @@ body {
   transition: box-shadow 0.3s;
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
   width: 100% !important;
+  /*max-width: 250px;*/
 }
 
 .main .four:hover {
@@ -59,9 +60,17 @@ body {
 
 .main .four .content p {
   font-size: 20px;
+  padding: 0 15px;
+  text-align: center;
 }
 
 .main .four .content button {
   color: #fff;
   width: 200px;
+}
+
+@media (min-width: 550px) {
+  .main .four {
+    max-width: 250px;
+  }
 }

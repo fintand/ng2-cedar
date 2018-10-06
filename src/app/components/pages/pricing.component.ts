@@ -17,31 +17,22 @@ export class PricingComponent {
 
   prices1 = [
     {
-      title: 'Lesson',
-      subtitle: '1 hour',
-      price: 35,
-      content: ['RSA, ADI Approved', 'Door-to-door pickup']
-    },
-    {
-      title: 'Lesson',
-      subtitle: '1.5 hours',
-      price: 50,
-      content: ['RSA, ADI Approved', 'Door-to-door pickup']
-    }
-  ];
-
-  prices2 = [
-    {
-      title: 'Lesson',
-      subtitle: '6 hours',
-      price: 190,
-      content: ['RSA, ADI Approved', 'Door-to-door pickup']
-    },
-    {
-      title: 'Lesson',
+      title: 'EDT Course',
       subtitle: '12 hours',
       price: 370,
-      content: ['RSA, ADI Approved', 'Door-to-door pickup']
+      content: ['Essential Driver Training Package', '12 lessons', 'RSA, ADI Approved']
+    },
+    {
+      title: 'Individual Lesson',
+      subtitle: '1 hour',
+      price: 35,
+      content: [ 'Top up lesson or Pre-Test', 'RSA, ADI Approved']
+    },
+    {
+      title: 'Extended Lesson',
+      subtitle: '1.5 hours',
+      price: 50,
+      content: ['Extended Top up lesson or Pre-Test', 'RSA, ADI Approved']
     }
   ];
 }
