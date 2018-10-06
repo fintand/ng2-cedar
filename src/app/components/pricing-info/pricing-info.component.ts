@@ -20,10 +20,10 @@ export class PricingInfoComponent implements OnInit {
 
   }
 
-  buyNow() {
+  buyNow(title) {
     swal('Thank you for your interest, online payments are coming soon!');
     this.angulartics2.eventTrack.next({
-      action: 'buyNow',
+      action: title,
       properties: { category: 'Pricing' },
     });
   }
