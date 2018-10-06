@@ -1,4 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
+import * as swal from "sweetalert";
+import {Angulartics2} from "angulartics2";
 
 @Component({
   selector: 'pricing-info',
@@ -12,10 +14,18 @@ export class PricingInfoComponent implements OnInit {
   @Input() price: string;
   @Input() content: string[];
 
-  constructor() { }
+  constructor(private angulartics2: Angulartics2) { }
 
   ngOnInit() {
 
+  }
+
+  buyNow() {
+    swal('Thank you for your interest, online payments are coming soon!');
+    this.angulartics2.eventTrack.next({
+      action: 'buyNow',
+      properties: { category: 'Pricing' },
+    });
   }
 
 }

@@ -99,6 +99,10 @@
   display: none;
 }
 
+.pricing-row {
+
+}
+
 /* Larger than phone */
 @media (min-width: 550px) {
   .header {
@@ -170,6 +174,11 @@
 
   .logo-container {
     display: none;
+  }
+
+  .pricing-row {
+    display: flex;
+    justify-content: space-around;
   }
 
 }
