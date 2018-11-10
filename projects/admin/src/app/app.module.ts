@@ -24,13 +24,15 @@ import { AdminGuard } from './admin.guard';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { ZXingScannerModule } from '@zxing/ngx-scanner';
 import { ScannerComponent } from './scanner/scanner.component';
+import { PaymentsComponent } from './payments/payments.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    ScannerComponent
+    ScannerComponent,
+    PaymentsComponent
   ],
   imports: [
     BrowserModule,
