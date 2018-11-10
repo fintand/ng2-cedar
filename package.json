@@ -7,6 +7,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod --aot",
+    "build-admin": "ng build admin --prod --aot",
     "deploy-public": "firebase deploy --only hosting:public",
     "deploy-admin": "firebase deploy --only hosting:admin",
     "lint": "tslint \"src/**/*.ts\" --project src/tsconfig.json --type-check && tslint \"e2e/**/*.ts\" --project e2e/tsconfig.json --type-check",
@@ -17,11 +18,14 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^6.0.0",
+    "@angular/cdk": "^6.0.0",
     "@angular/common": "^6.0.0",
     "@angular/compiler": "^6.0.0",
     "@angular/core": "^6.0.0",
+    "@angular/fire": "^5.1.0",
     "@angular/forms": "^6.0.0",
     "@angular/http": "^6.0.0",
+    "@angular/material": "^6.0.0",
     "@angular/platform-browser": "^6.0.0",
     "@angular/platform-browser-dynamic": "^6.0.0",
     "@angular/platform-server": "^6.0.0",
@@ -29,7 +33,9 @@
     "@types/sweetalert": "^1.1.27",
     "angulartics2": "^6.0.0",
     "core-js": "^2.4.1",
-    "ng-recaptcha": "^3.0.5",
+    "firebase": "^5.5.8",
+    "hammerjs": "^2.0.8",
+    "ng-recaptcha": "^4.2.1",
     "ng-sidebar": "^3.6.0",
     "ngx-lazy-load-images": "^1.3.1",
     "rxjs": "6.1.0",
@@ -54,7 +60,7 @@
     "protractor": "~4.0.13",
     "rxjs-tslint": "^0.1.5",
     "ts-node": "~2.0.0",
-    "tslint": "~4.5.0",
+    "tslint": "^4.5.1",
     "typescript": "^2.7.2"
   }
 }
