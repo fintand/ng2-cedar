@@ -22,12 +22,15 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 import { AdminGuard } from './admin.guard';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { ZXingScannerModule } from '@zxing/ngx-scanner';
+import { ScannerComponent } from './scanner/scanner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    ScannerComponent
   ],
   imports: [
     BrowserModule,
@@ -36,6 +39,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
+    ZXingScannerModule.forRoot(),
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
