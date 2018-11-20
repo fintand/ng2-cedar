@@ -9,8 +9,8 @@ import { PaymentsComponent } from './payments/payments.component';
 const routes: Routes = [
   { path: '', component: HomeComponent, canActivate: [AdminGuard] },
   { path: 'login', component: LoginComponent },
-  { path: 'scanner', component: ScannerComponent },
-  { path: 'payments', component: PaymentsComponent }
+  { path: 'scanner', component: ScannerComponent, canActivate: [AdminGuard] },
+  { path: 'payments', component: PaymentsComponent, canActivate: [AdminGuard] }
 ];
 
 @NgModule({

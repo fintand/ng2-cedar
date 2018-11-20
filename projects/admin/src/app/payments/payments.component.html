@@ -1,3 +1,28 @@
-<mat-list role="list">
-  <mat-list-item role="listitem" *ngFor="let p of items | async">{{p.token.email}}</mat-list-item>
-</mat-list>
+<!--<mat-list role="list">-->
+  <!--<mat-list-item role="listitem" *ngFor="let p of items | async">{{p.token.email}}</mat-list-item>-->
+<!--</mat-list>-->
+
+<table mat-table [dataSource]="items | async" class="mat-elevation-z8">
+  <ng-container matColumnDef="position" sticky>
+    <th mat-header-cell *matHeaderCellDef> Paid. </th>
+    <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef> Email. </th>
+    <td mat-cell *matCellDef="let element"> {{element.token.email}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> ID. </th>
+    <td mat-cell *matCellDef="let element"> {{element.token.id}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="type">
+    <th mat-header-cell *matHeaderCellDef> Type. </th>
+    <td mat-cell *matCellDef="let element"> {{element.token.type}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true;"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

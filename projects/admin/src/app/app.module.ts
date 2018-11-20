@@ -25,6 +25,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { ZXingScannerModule } from '@zxing/ngx-scanner';
 import { ScannerComponent } from './scanner/scanner.component';
 import { PaymentsComponent } from './payments/payments.component';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { PaymentsComponent } from './payments/payments.component';
     MatIconModule,
     MatListModule,
     MatDividerModule,
-    MatMenuModule
+    MatMenuModule,
+    MatTableModule
   ],
   providers: [AuthService, AdminGuard],
   bootstrap: [AppComponent]

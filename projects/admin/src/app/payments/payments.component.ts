@@ -11,10 +11,13 @@ export class PaymentsComponent implements OnInit {
 
   private itemsCollection: AngularFirestoreCollection<any>;
   items: Observable<any>;
+  displayedColumns: string[] = ['position', 'email', 'id', 'type'];
 
   constructor(private afs: AngularFirestore) { }
 
   ngOnInit() {
+
+
 
     this.itemsCollection = this.afs.collection<any>('payments');
     this.items = this.itemsCollection.valueChanges();
