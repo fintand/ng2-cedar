@@ -19,7 +19,7 @@ export class PricingComponent {
     {
       title: 'EDT Course',
       subtitle: '12 hours',
-      price: 370,
+      price: 350,
       content: ['Essential Driver Training Package', '12 lessons', 'RSA, ADI Approved']
     },
     {
