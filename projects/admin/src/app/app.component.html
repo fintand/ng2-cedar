@@ -1,0 +1,35 @@
+<div class="app-container">
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav mode="push">
+      <mat-list role="list">
+        <mat-list-item role="listitem" (click)="sidenav.toggle()" routerLink="/">Home</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item role="listitem" (click)="sidenav.toggle()" routerLink="/scanner">Scanner</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item role="listitem" (click)="sidenav.toggle()" routerLink="/payments">Payments</mat-list-item>
+      </mat-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <mat-toolbar>
+        <button mat-button style="min-width: 55px;" (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span style="flex: 1;">Cedar Admin</span>
+        <button mat-icon-button [matMenuTriggerFor]="menu" *ngIf="auth.user | async;">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="auth.signOut()">
+            <mat-icon>exit_to_app</mat-icon>
+            <span>Logout</span>
+          </button>
+        </mat-menu>
+      </mat-toolbar>
+
+      <router-outlet></router-outlet>
+
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+

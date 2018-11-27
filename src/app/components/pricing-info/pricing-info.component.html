@@ -1,0 +1,15 @@
+<div class="main">
+  <div class="">
+    <div class="four columns">
+      <div class="heading">
+        <div class="title">{{title}}</div>
+        <div class="subtitle">{{subtitle}}</div>
+        <div class="price">€{{price}}</div>
+      </div>
+      <div class="content">
+        <p *ngFor="let c of content">&#10003; {{c}}</p>
+        <button (click)="buyNow(title)">Buy Now</button>
+      </div>
+    </div>
+  </div>
+</div>

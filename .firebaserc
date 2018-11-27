@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "cedar-fb9a1"
+  },
+  "targets": {
+    "cedar-fb9a1": {
+      "hosting": {
+        "public": [
+          "cedar-fb9a1"
+        ],
+        "admin": [
+          "cedar-admin"
+        ]
+      }
+    }
   }
 }

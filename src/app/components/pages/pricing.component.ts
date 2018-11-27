@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import {Title, Meta} from "@angular/platform-browser";
+import {Component} from '@angular/core';
+import {Title, Meta} from '@angular/platform-browser';
 
 @Component({
   selector: 'pricing',
@@ -9,23 +9,30 @@ export class PricingComponent {
 
   constructor(private meta: Meta, private titleService: Title) {
     this.titleService.setTitle('Pricing - Cedar Driving School');
-    this.meta.updateTag({name: 'description', content: 'Lessons, Pre-Test, EDT per hour. 6 Lessons. 12' +
-    ' EDT Lessons'}, 'name=description');
+    this.meta.updateTag({
+      name: 'description', content: 'Lessons, Pre-Test, EDT per hour. 6 Lessons. 12' +
+        ' EDT Lessons'
+    }, 'name=description');
   }
 
-  prices = [
+  prices1 = [
     {
-      lesson_type: "Lesson | Pre-Test | EDT per hour",
-      price: "35"
+      title: 'EDT Course',
+      subtitle: '12 hours',
+      price: 350,
+      content: ['Essential Driver Training Package', '12 lessons', 'RSA, ADI Approved']
     },
     {
-      lesson_type: "6 Lessons",
-      price: "190"
+      title: 'Individual Lesson',
+      subtitle: '1 hour',
+      price: 35,
+      content: [ 'Top up lesson or Pre-Test', 'RSA, ADI Approved']
     },
     {
-      lesson_type: "12 EDT Lessons",
-      price: "370"
+      title: 'Extended Lesson',
+      subtitle: '1.5 hours',
+      price: 50,
+      content: ['Extended Top up lesson or Pre-Test', 'RSA, ADI Approved']
     }
-  ]
-
+  ];
 }

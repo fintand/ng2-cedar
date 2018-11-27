@@ -1,6 +1,8 @@
 {
-  "hosting": {
-    "public": "dist",
+  "hosting": [
+    {
+    "target": "public",
+    "public": "dist/public",
     "rewrites": [
       {
         "source": "**",
@@ -18,5 +20,27 @@
         ]
       }
     ]
-  }
+  },
+    {
+      "target": "admin",
+      "public": "dist/admin",
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "headers": [
+        {
+          "source" : "**/*.@(jpg|jpeg|gif|png)",
+          "headers" : [
+            {
+              "key" : "Cache-Control",
+              "value" : "max-age=7200"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

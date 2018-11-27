@@ -6,19 +6,8 @@
     <img src="../../../assets/cc-visa.svg" alt="visa logo">
     <img src="../../../assets/cc-mastercard.svg" alt="master card logo">
   </div>
+  <div class="pricing-row">
+    <pricing-info *ngFor="let price of prices1" [title]="price.title" [subtitle]="price.subtitle" [price]="price.price" [content]="price.content"></pricing-info>
+  </div>
 
-  <table class="u-full-width">
-    <thead>
-    <tr>
-      <th>Lesson Type</th>
-      <th>Price (Euro)</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let price of prices" data-scroll>
-      <td>{{price.lesson_type}}</td>
-      <td>&euro;{{price.price}}</td>
-    </tr>
-    </tbody>
-  </table>
 </div>
