@@ -2,6 +2,9 @@ import {AfterViewInit, Component, Input, ViewChild} from '@angular/core';
 import {PaymentService} from "../../../service/payment.service";
 import {AngularFireAuth} from "angularfire2/auth";
 import {AngularFirestore} from "angularfire2/firestore";
+import StripePaymentRequest = stripe.paymentRequest.StripePaymentRequest;
+import Elements = stripe.elements.Elements;
+import Element = stripe.elements.Element;
 
 @Component({
   selector: 'payment-request',
@@ -13,9 +16,9 @@ export class PaymentRequestComponent implements AfterViewInit {
   @Input() amount: number;
   @Input() label: string;
 
-  elements: any;
-  paymentRequest: any;
-  prButton: any;
+  elements: Elements;
+  paymentRequest: StripePaymentRequest;
+  prButton: Element;
   card: any;
   canMakePayment: boolean = false;
   isInitialising: boolean = true; // use this for a loading spinner
@@ -76,9 +79,10 @@ export class PaymentRequestComponent implements AfterViewInit {
       paymentRequest: this.paymentRequest,
       style: {
         paymentRequestButton: {
-          type: 'buy', // 'default' | 'donate' | 'buy',
-          theme:  'dark' // 'dark' | 'light' | 'light-outline',
-        },
+          height: '100px',
+          theme: 'dark',
+          type: 'buy'
+        }
       }
     });
 
