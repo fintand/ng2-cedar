@@ -12,7 +12,7 @@ export class GiftVoucherComponent implements AfterViewInit {
   public giftVoucherForm = this.fb.group({
     name: [null, Validators.required],
     subject: [Validators.required]
-  })
+  });
 
   constructor(public fb: FormBuilder, private meta: Meta, private titleService: Title) {
     this.titleService.setTitle('Gift Voucher - Cedar Driving School');
@@ -21,8 +21,12 @@ export class GiftVoucherComponent implements AfterViewInit {
 
   prices = [
     {
-      lesson_type: "1 Hours",
+      lesson_type: "1 Hour",
       price: "35"
+    },
+    {
+      lesson_type: "1.5 Hours",
+      price: "50"
     },
     {
       lesson_type: "6 Hours",
@@ -30,9 +34,9 @@ export class GiftVoucherComponent implements AfterViewInit {
     },
     {
       lesson_type: "12 Hours",
-      price: "370"
+      price: "350"
     }
-  ]
+  ];
 
   ngAfterViewInit() {
 

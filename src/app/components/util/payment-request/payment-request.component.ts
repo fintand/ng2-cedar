@@ -52,7 +52,9 @@ export class PaymentRequestComponent implements AfterViewInit {
     // Check if we can use the Payment Request API TODO: May not need this
     this.paymentRequest.canMakePayment().then(res => {
       this.canMakePayment = Boolean(res);
-      console.log(this.canMakePayment)
+      console.log('canMakePayment:resolve', this.canMakePayment)
+    }).catch(e => {
+      console.log('canMakePayment:reject', e)
     });
 
     // 2. initalize elements
@@ -126,6 +128,7 @@ export class PaymentRequestComponent implements AfterViewInit {
 
   async mountButton() {
     const result = await this.paymentRequest.canMakePayment();
+    console.log('mountButton', result)
 
     if (result) {
       this.prButton.mount(this.payElement.nativeElement);
