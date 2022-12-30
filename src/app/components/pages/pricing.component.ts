@@ -25,7 +25,7 @@ export class PricingComponent {
     {
       title: 'Individual Lesson',
       subtitle: '1 hour',
-      price: 45,
+      price: 50,
       content: [ 'Top up lesson or Pre-Test', 'RSA, ADI Approved']
     }
   ];
